@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Futuristic Business Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .business-card {
+      width: 320px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 100px auto;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .profile-image {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00ffff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #play-music {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+      padding: 10px 15px;
+      background: #66ccff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(102, 204, 255, 0.7);
+    }
+
+    #play-music:hover {
+      background: #4eb2e6;
+    }
+  </style>
+</head>
+<body>
+  <!-- 粒子背景 -->
+  <div id="particles-js"></div>
+
+  <!-- 名片主体 -->
+  <div class="business-card">
+    <img class="profile-image" src="https://i.redd.it/3rkjnsjfwo8e1.jpeg" alt="Cat meme" />
+    <p class="full-name">Peggy Voong</p>
+    <p class="designation">Frontend Developer</p>
+    <p class="company">FreeCodeCamp</p>
+    <hr />
+    <p>peggy8526123@gmail.com</p>
+    <p>+06 (11)787787878</p>
+    <a href="https://github.com/USAGI7878" target="_blank">Portfolio</a>
+    <hr />
+    <div class="social-media">
+      <h2>Connect with me</h2>
+      <a href="https://twitter.com" target="_blank">Twitter</a><br />
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a><br />
+      <a href="https://github.com" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- 播放音乐按钮 -->
+  <button id="play-music" onclick="startMusic()">🔊 播放背景音乐</button>
+
+  <!-- 背景音乐 -->
+  <audio id="bg-music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 粒子效果 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    // 播放音乐逻辑
+    let musicStarted = false;
+    function startMusic() {
+      if (!musicStarted) {
+        const audio = document.getElementById("bg-music");
+        audio.play().then(() => {
+          musicStarted = true;
+          document.getElementById("play-music").style.display = "none";
+        }).catch(err => {
+          alert("播放失败：浏览器可能阻止了自动播放，请再次点击");
+          console.error(err);
+        });
+      }
+    }
+  </script>
+</body>
+</html>

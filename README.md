@@ -28,3 +28,6 @@ git clone https://github.com/USAGI7878/business-card.git
 cd business-card
 pip install -r requirements.txt
 streamlit run streamlit_app.py
+
+I'm a nurse who’s passionate about software development and AI.
+This is one of my small personal projects to combine creativity with coding

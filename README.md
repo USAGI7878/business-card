@@ -1,33 +1,40 @@
-# 🧑🏻‍💼 Streamlit Business Card
+# 🖼️ HTML Business Card
 
-A simple, elegant online **business card app** built with [Streamlit](https://streamlit.io/).  
-It serves as a personal landing page with links to your GitHub, LinkedIn, email, and more.
+A simple and stylish **online business card** built with HTML & CSS.  
+Perfect as a personal landing page with your name, contact info, and unique aesthetic.
 
 ## ✨ Features
 
-- Clean layout with personal avatar and profile
-- Clickable links to your contact & portfolio
-- Responsive and easily editable via Python
+- Clean layout with custom colors and fonts
+- Clickable contact info (email, phone)
+- Lightweight and fast – deployable via GitHub Pages
+- Easy to edit HTML / CSS for personal style
 
 ## 🚀 Live Demo
 
-👉 [Click here to view it live](https://usagi7878-business-card.streamlit.app/)
+👉 [Click here to view it live](https://usagi7878.github.io/business-card/)
 
 ## 🛠️ Built With
 
-- 🐍 Python
-- 📊 Streamlit
-- 📎 Markdown
+- 🧱 HTML5
+- 🎨 CSS3
 
 ## 🧰 How to Use
 
-To run locally:
+To view locally:
 
 ```bash
 git clone https://github.com/USAGI7878/business-card.git
 cd business-card
-pip install -r requirements.txt
-streamlit run streamlit_app.py
+open index.html
+Or simply visit the Live Demo!
 
-I'm a nurse who’s passionate about software development and AI.
-This is one of my small personal projects to combine creativity with coding
+👩‍⚕️ About Me
+I'm a nurse passionate about design, coding, and AI.
+This little project is my way of combining creativity with front-end skills.
+More coming soon!
+## 🛠 Future Plans
+
+- Make it responsive for mobile
+- Add dark/light theme toggle
+- Include animated hover effects

@@ -12,7 +12,7 @@ Perfect as a personal landing page with your name, contact info, and unique aest
 
 ## 🚀 Live Demo
 
-👉 [Click here to view it live](https://usagi7878.github.io/business-card/)
+👉 [Click here to view it live]https://usagi7878.github.io/business-card/
 
 ## 🛠️ Built With
 

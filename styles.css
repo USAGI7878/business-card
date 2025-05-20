@@ -21,18 +21,17 @@ a:hover {
 
 .business-card {
   width: 320px;
-  background-color: rgba(255, 228, 225, 0.95);
+  background-color: rgba(255, 228, 225, 0.95); /* 粉色玻璃效果 */
   color: #333;
   padding: 20px;
   margin: 100px auto;
   text-align: center;
   font-size: 16px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5); /* 粉色荧光 */
+  backdrop-filter: blur(10px); /* 加强模糊 */
 }
+
 
 .profile-image {
   width: 100%;
@@ -41,7 +40,7 @@ a:hover {
 }
 
 .neon-text {
-  color: #ff1493;
+  color: #ff69b4;
   text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4;
   font-weight: bold;
   font-size: 1.4em;
